@@ -2,18 +2,22 @@ import unittest
 
 
 def multiply(a, b):
-    if a * b == 3:
-        return 3
-    else:
-        return -16
+    return a*b
 
 
-class Vex(unittest.TestCase):
+class testmultiply(unittest.TestCase):
+    def test_multiply_ones(self):
+        self.assertEqual(multiply(1, 1), 1)
+
+    def test_multiply_two(self):
+        self.assertEqual(multiply(2, 2), 4)
+        
     def test_addition(self):
-        self.assertEqual(multiply(1, 2), 3)
+        self.assertEqual(multiply(3, 3),9)
 
     def test_addition(self):
-        self.assertEqual(multiply(4, -4),-16)
+        self.assertEqual(multiply(4, 4), 16)
+
 
 
 if __name__ == "__main__":
